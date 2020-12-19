@@ -9,9 +9,9 @@ const Index = (props) => {
 
     <div className="app">
       <Head>
-        <title>Beautiful, high quality carpets | CarpetCity</title>
+        <title>Auntie Em's Country Gifts</title>
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.css" />
-        <meta name="description" content="Buy beautiful, high quality carpets for your home."/>
+        <meta name="description" content="Buy beautiful, handmade country gifts."/>
       </Head>
       <Header />
       <main className="main">
