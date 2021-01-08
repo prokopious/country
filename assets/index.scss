@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
 
 // Variables
-$color--default: #550000;
-$color--light: lighten($color--default, 65%);
-$color--primary: rgba(139, 0, 0, 0.856);
-$color--secondary: #e722afd8;
-$color--background: #ffd6d6b6;
+$color--default: #0c063b;
+$color--light: #d0e1f9;
+$color--background:#ffffff;
+$color--secondary: #000000;
+$color--primary: #ac0000;
 
 $size--unit: 8px;
 
@@ -15,20 +15,20 @@ $layout--max-width: 1000px;
 // Default styling
 * {
   box-sizing: border-box;
-  font-family: Baskerville Old Face;
+ 
   font-size: $size--unit * 2;
   color: $color--default;
   
 }
 html {
-
+  letter-spacing: 0.2px;
 }
 
 html,
 body,
 #__next,
 .app {
-  
+ 
   padding: 0;
   margin: 0;
   background-color: $color--background;
@@ -47,10 +47,13 @@ body,
     h2 {
       font-size: 30px;
       padding: 10px;
+     
     }
     .product {
-      border-top: 2px solid rgba(251, 0, 42, 0.322);
+      border-top: 2px solid rgb(0, 0, 0);
+      background-color: #f9ffd7;
       border-left: 0px;
+    
       }
   }
 }
@@ -111,6 +114,7 @@ body,
   border-bottom: 3px 50% solid rgba(255, 0, 43, 0.26);
   padding-right: 2px;
   font-size: 15px;
+  letter-spacing: 0.5px;
 
   &__container {
     display: flex;
@@ -190,6 +194,7 @@ body,
     }
   }
 
+
   &:not(:last-child) {
     margin-bottom: $size--unit * 12;
   }
@@ -240,6 +245,14 @@ body,
   &__title {
     margin-top: 0;
     font-size: $size--unit * 5;
+
+   
+  }
+  &__title:hover {
+    margin-top: 0;
+    font-size: $size--unit * 5;
+    
+
    
   }
 
@@ -251,21 +264,23 @@ body,
 }
 
 .product-definition {
-  all: unset;
-  color: rgb(255, 255, 255);
-  background-color: rgb(255, 0, 0);
   
- 
-  border-radius: 3px;
+  color: #000000;
+  background-color:  #ffffff;
 
-  text-transform: uppercase;
+
+ 
+ 
+
+
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   padding: $size--unit * 2;
   padding-left: $size--unit * 3;
   padding-right: $size--unit * 3;
   margin-top: $size--unit * 2;
-  @include button-hover($color--primary);
+  @include button-hover($color--background);
+ 
 }
 
 .footer {
@@ -292,7 +307,7 @@ body,
   margin-top: 25px;
   text-align: center;
   font-size: 40px;
-  font-family: Baskerville Old Face;
+  font-family: ITC Berkely;
 }
 .other {
   margin-bottom: 70px;
@@ -309,10 +324,12 @@ body,
   padding-bottom: 10px;
 }
 
-
-
 .product {
-border: 6px solid rgba(251, 0, 42, 0.185);
-background-color: rgba(255, 255, 255, 0.521);
+  border-top: 1px solid rgba(0, 0, 0, 0.322);
+  border-left: 0px;
+  background: rgba(255, 255, 255, 0.733);
+ 
+
 }
+
 

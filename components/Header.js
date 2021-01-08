@@ -5,12 +5,12 @@ const Header = () => {
     <header className="header">
       <div className="header__container">
         <Link href="/">
-          <div className="header__logo-container">
+          <div id="c" className="header__logo-container">
             <img src="https://www.linkpicture.com/q/rosa.png" alt="" className="header__logo" />
             <span className="header__title">Home</span>
           </div>
         </Link>
-        <div className="header__title"> </div>
+        <div id="c" className="header__title"> </div>
         <Link href="/">
           <div className="header__logo-container">
             
@@ -18,7 +18,7 @@ const Header = () => {
           </div>
         </Link>
         <Link href="/">
-          <div className="header__logo-container">
+          <div id="c" className="header__logo-container">
             
             <span className="header__title">Contact</span>
           </div>
@@ -34,15 +34,16 @@ const Header = () => {
       </div>
       <style jsx>{`
       
-     body {background-color: }
-      `}</style>
-      <style global jsx>{`
-        body {
-         
-        }
+   
+      
+      
+      c:hover {
+        color: white;
+      }
       `}</style>
     </header>
   )
 }
+
 
 export default Header;
