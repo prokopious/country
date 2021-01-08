@@ -6,8 +6,21 @@ const Header = () => {
       <div className="header__container">
         <Link href="/">
           <div className="header__logo-container">
-            <img src="static/rooster.png" alt="" className="header__logo" />
-            <span className="header__title">Auntie Em's Country Gifts</span>
+            <img src="https://www.linkpicture.com/q/rosa.png" alt="" className="header__logo" />
+            <span className="header__title">Home</span>
+          </div>
+        </Link>
+        <div className="header__title"> </div>
+        <Link href="/">
+          <div className="header__logo-container">
+            
+            <span className="header__title">Products</span>
+          </div>
+        </Link>
+        <Link href="/">
+          <div className="header__logo-container">
+            
+            <span className="header__title">Contact</span>
           </div>
         </Link>
         <button className="header__checkout snipcart-checkout">
@@ -21,16 +34,11 @@ const Header = () => {
       </div>
       <style jsx>{`
       
-        header {
-          background: yellow;
-        }
-        @media (max-width: 600px) {
-         
-        }
+     body {background-color: }
       `}</style>
       <style global jsx>{`
         body {
-          background: black;
+         
         }
       `}</style>
     </header>

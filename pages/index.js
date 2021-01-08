@@ -3,18 +3,26 @@ import ProductList from "../components/ProductList"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import '../assets/index.scss'
+import Typography from 'typography'
+import deYoungTheme from 'typography-theme-de-young'
+
+const typography = new Typography(deYoungTheme)
 
 const Index = (props) => {
   return (
 
     <div className="app">
       <Head>
-        <title>Auntie Em's Country Gifts</title>
+        <title>The Glass Phial</title>
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.css" />
-        <meta name="description" content="Buy beautiful, handmade country gifts."/>
+        <meta name="description" content="Buy perfuming supplies natural and synthetic."/>
       </Head>
       <Header />
+      <div className="promotional-message">The Glass Phial</div>
+      <div className="other">A COLLECTION OF FINE PERFUMING SUPPLIES</div>
       <main className="main">
+        <div id="new">New Items</div>
+
         <ProductList products={props.products} />
       </main>
       <Footer />
@@ -27,9 +35,9 @@ const Index = (props) => {
 Index.getInitialProps = async () => {
   return {
     products: [
-      { id: "nextjs-seo_carpet1", name: "Blackberry Jam", price: 25.0, image: "static/jam.jpg", description: "This delicious jam is based on my grammy's old recipe." },
-      { id: "nextjs-seo_carpet2", name: "Rooster", price: 25.00, image: "static/rooster2.png", description: "Can't get your household under control? Well, they say that you need 2 roosters in the coop. This overbearing bird will display dominance right out of the box." },
-      { id: "nextjs-seo_carpet3", name: "Squirrel Chow", price: 25.00, image: "static/corn.jpg", description: "This premium formula was developed by my relatives during the Great Depression. Place it outside and watch the squirrels come runnin'!" },
+      { id: "nextjs-seo_carpet1", name: "Turkish Rose Absolute", price: 25.0, image: "static/rose.jpg", description: "This is the rose of Byzantium." },
+      { id: "nextjs-seo_carpet2", name: "Methyl Laitone", price: 25.00, image: "https://www.gardenia.net/storage/app/public/guides/detail/19587224_m.jpg", description: "Methyl laitone imparts milky tonalities that are important in gardenia and sandalwood accords." },
+      { id: "nextjs-seo_carpet3", name: "α-irone", price: 25.00, image: "https://www.gardenia.net/storage/app/public/guides/detail/83847060_mOptimized.jpg", description: "This premium formula was developed by my relatives during the Great Depression. Place it outside and watch the squirrels come runnin'!" },
       
     ]
   }

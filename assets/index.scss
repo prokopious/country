@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
 
 // Variables
-$color--default: #3a3a3a;
+$color--default: #550000;
 $color--light: lighten($color--default, 65%);
-$color--primary: yellow;
-$color--secondary: #429bfc;
-$color--background: #f8faff;
+$color--primary: rgba(139, 0, 0, 0.856);
+$color--secondary: #e722afd8;
+$color--background: #ffd6d6b6;
 
 $size--unit: 8px;
 
@@ -15,24 +15,43 @@ $layout--max-width: 1000px;
 // Default styling
 * {
   box-sizing: border-box;
-  font-family: "Muli", sans-serif;
+  font-family: Baskerville Old Face;
   font-size: $size--unit * 2;
   color: $color--default;
+  
+}
+html {
+
 }
 
 html,
 body,
 #__next,
 .app {
+  
   padding: 0;
   margin: 0;
   background-color: $color--background;
+  //background: url(https://www.linkpicture.com/q/petal3.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
 }
 
 // Mixins
 @mixin sm {
   @media (max-width: #{$layout--max-width}) {
     @content;
+    h2 {
+      font-size: 30px;
+      padding: 10px;
+    }
+    .product {
+      border-top: 2px solid rgba(251, 0, 42, 0.322);
+      border-left: 0px;
+      }
   }
 }
 
@@ -89,7 +108,9 @@ body,
   margin-bottom: $size--unit * 6;
   padding-top: $size--unit * 4;
   padding-bottom: $size--unit * 4;
-  border-bottom: 1px solid $color--light;
+  border-bottom: 3px 50% solid rgba(255, 0, 43, 0.26);
+  padding-right: 2px;
+  font-size: 15px;
 
   &__container {
     display: flex;
@@ -119,6 +140,7 @@ body,
     font-weight: bold;
     font-size: $size--unit * 3;
     cursor: pointer;
+    padding-left: 9px;
   }
 
   &__checkout {
@@ -160,10 +182,10 @@ body,
     }
 
     &__image {
-      transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(30px);
+     
       box-shadow: 30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
       @include sm {
-        transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(-30px);
+       padding-right: 5px;
       }
     }
   }
@@ -195,10 +217,11 @@ body,
     max-width: 500px;
     max-height: 400px;
     background-size: cover;
-    transform: perspective(650px) rotateZ(-5deg) rotateX(2.5deg) rotateY(15deg) scale(0.8) translateX(-30px);
+    padding: 5px;
+    
     box-shadow: -30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
     @include sm {
-      transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(-30px);
+      
       box-shadow: 30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
       &:last-child {
         display: none;
@@ -217,23 +240,24 @@ body,
   &__title {
     margin-top: 0;
     font-size: $size--unit * 5;
+   
   }
 
   &__description {
     font-size: $size--unit * 2.5;
     line-height: $size--unit * 3.5;
+    
   }
 }
 
 .product-definition {
   all: unset;
-  color: rgb(255, 99, 99);
-  background-color: yellow;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
   
-  //border: 1px solid darken($color--primary, 3%);
-  //text-shadow: 2px 2px 5px darken($color--primary, 3%);
+ 
   border-radius: 3px;
-  font-weight: bold;
+
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
@@ -262,3 +286,33 @@ body,
 .snipcart-layout__header {
   min-height: 80px;
 }
+
+.promotional-message {
+  margin-bottom: 20px;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 40px;
+  font-family: Baskerville Old Face;
+}
+.other {
+  margin-bottom: 70px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 23px;
+  font-family: Baskerville Old Face;
+}
+
+#new {
+  font-size: 30px;
+  text-align: center;
+  font-family: Baskerville Old Face;
+  padding-bottom: 10px;
+}
+
+
+
+.product {
+border: 6px solid rgba(251, 0, 42, 0.185);
+background-color: rgba(255, 255, 255, 0.521);
+}
+
